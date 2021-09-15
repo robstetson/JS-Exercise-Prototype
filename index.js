@@ -95,21 +95,24 @@ this.gallons = gallons;
 */
 function Baby(name, age, favoriteToy) {
  this.favoriteToy = favoriteToy;
- this.play = function(){
-   return `Playing with a ${favoriteToy}`
- }
-Baby.prototype.play = favoriteToy;
+ 
 Person.call(this, name, age); 
 }
 Baby.prototype = Object.create(Person.prototype);
-
+Baby.prototype.play = function(){
+  return `Playing with a ${this.favoriteToy}`
+}
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
   1. 
+Implicit Binding
   2. 
+Window Binding 
   3. 
+Strict mode 
   4. 
+Events 
 */
 
 
